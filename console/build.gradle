@@ -1,6 +1,6 @@
 apply plugin: 'java'
 
-def mainClass = "aron.sinoai.consolespringsample.spring.Console"
+def mainClass = "aron.sinoai.consolespringsample.spring.Main"
 
 def springVersion = "4.2.5.RELEASE"
 
