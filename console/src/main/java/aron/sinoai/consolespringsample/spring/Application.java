@@ -6,7 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 /**
  */
-public class Main {
+public class Application {
     public static void main(String[] args) {
 
         final ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);

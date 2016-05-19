@@ -1,6 +1,6 @@
 apply plugin: 'java'
 
-def mainClass = "aron.sinoai.consolespringsample.spring.Main"
+def mainClass = "aron.sinoai.consolespringsample.spring.Application"
 
 def springVersion = "4.2.5.RELEASE"
 
@@ -27,7 +27,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes 'Main-Class': mainClass
+        attributes 'Application-Class': mainClass
     }
 }
 
