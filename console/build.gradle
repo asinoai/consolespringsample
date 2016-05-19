@@ -1,0 +1,38 @@
+apply plugin: 'java'
+
+def mainClass = "aron.sinoai.consolespringsample.spring.Console"
+
+def springVersion = "4.2.5.RELEASE"
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+
+    compile group: "org.springframework", name: "spring-core", version: "$springVersion"
+    compile group: "org.springframework", name: "spring-beans", version: "$springVersion"
+    compile group: "org.springframework", name: "spring-context", version: "$springVersion"
+    compile group: "org.springframework", name: "spring-aop", version: "$springVersion"
+    compile group: "org.springframework", name: "spring-web", version: "$springVersion"
+    compile group: "org.springframework", name: "spring-webmvc", version: "$springVersion"
+
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+}
+
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClass
+    }
+}
+
+
+task execute(type:JavaExec) {
+    main = mainClass
+    classpath = sourceSets.main.runtimeClasspath
+}
